@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-credit-cards';
-import './CardList2.css'
+import './CardList.css'
 export default class CardsList2 extends React.Component {
   render() {
     return (
@@ -12,12 +12,29 @@ export default class CardsList2 extends React.Component {
             expiry="**/**"
             cvc="***"
           />
+
+          <Card
+            name="**** *****"
+            number="36** **** **** ****"
+            expiry="**/**"
+            cvc="***"
+          />
+
           <Card
             name="**** *****"
             number="6250 **** **** ****"
             expiry="**/**"
             cvc="***"
           />
+
+          <Card
+            name="**** *****"
+            number="6759 **** **** ****"
+            expiry="**/**"
+            cvc="***"
+          />
+
+
         </div>
       </div>
     );

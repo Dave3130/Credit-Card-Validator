@@ -7,7 +7,7 @@
 .head{
      margin-top: 0px;
     margin-bottom: 0px;
-  padding: .77rem 0;
+  padding: .82rem 0;
   background-color: crimson;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -15,15 +15,28 @@
   color: white;
   margin-bottom: 1rem;
 }
+.grid-2 .container{
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 15px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 form { 
 padding: 2rem; 
 margin: 0 auto; 
 text-align: center;
+
 }
 
 form input{
-    width: 75%;
+    width: 80%;
     line-height: 30px;
     border-radius: 8px;
     border: 1px solid gray;
@@ -31,8 +44,15 @@ form input{
     padding: 3px 10px;
     margin: 5px;
 }
-
-.btn{
+.is-invalid{
+    border: 1px solid red;
+}
+.error-msg{
+    font-size: 13px;
+    color: red;
+    font-weight: 500;
+}
+.show-validate-btn{
     margin: 8px;
     width: auto;
     padding: 10px 20px;
@@ -41,32 +61,89 @@ form input{
     border: 1px solid crimson;
     font-size: 15px;
     color: aliceblue;
-    
 }
 
-small{
-    font-weight: 700;
+.hide-validate-btn{
+    display: none;
+}
+.show-retry-btn{
+     margin: 8px;
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: crimson;
+    border: 1px solid crimson;
     font-size: 15px;
+    color: aliceblue;
+}
+.hide-retry-btn{
+    display: none;
+}
+.result{
+    display: block;
+    background-color: yellow;
+    color: black;
+    font-size: 22px;
+}
+.supported-card-title{
+        display: none;
 }
 
-@media (max-width: 900px) {
-  .grid-container { grid-template-columns: repeat(1, 1fr); }
-    
-    .grid-2{
-        grid-row-start: 1;
-          grid-row-end: 2;
+@media (min-width: 900px) {
+  .grid-container { grid-template-columns: repeat(3, 1fr); }
+  .grid-2{
+        width: 100%;
+        margin: 30px auto;
     }
-    
+}
+@media(max-width: 899px){
+    .grid-2{
+        width: 75%;
+        margin: 30px auto;
+    }
+    .supported-card-title{
+    padding-top: 30px !important;
+    display: block;
+    text-align: center;
+    }
+
+  .grid-container { grid-template-columns:(1, 1fr); }
     .grid-1{
         grid-row-start: 2;
           grid-row-end: 3;
     }
-    
+
     .grid-3{
         grid-row-start: 3;
           grid-row-end: 4;
     }
 }
-@media (min-width: 900px) {
-  .grid-container { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 700px) {
+
+    .supported-card-title{
+    padding-top: 30px !important;
+    display: block;
+    text-align: center;
+    }
+    .grid-2{
+        width: 100%;
+        margin: 30px auto;
+    }
+
+  .grid-container { grid-template-columns:(1, 1fr); }
+
+    .grid-2{
+        grid-row-start: 1;
+          grid-row-end: 2;
+    }
+
+    .grid-1{
+        grid-row-start: 2;
+          grid-row-end: 3;
+    }
+
+    .grid-3{
+        grid-row-start: 3;
+          grid-row-end: 4;
+    }
 }
